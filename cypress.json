@@ -1,0 +1,5 @@
+{
+  "testFiles": "**/*.{feature,features}",
+  "baseUrl": "https://todomvc.com/examples/react/#/",
+  "ignoreTestFiles": "*.js"
+}
