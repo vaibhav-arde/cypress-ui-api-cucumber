@@ -14,3 +14,12 @@ Both solutions should be in the same codebase hosted on Github or similar.
 We expect as a result to have a fully functioning test suite. It has to be wrapped in easy to use solution for anyone to run it (e.g. dockerize tests)
 
 Node Version: 14.17.3
+
+How to use:
+
+Use Node Version: 14.17.3
+npm install
+
+To open Cypress use command : npm run cy:open   
+To run All tests in local use command: npm run cy:test   
+To build docker image use command: docker build -t imageName .  
