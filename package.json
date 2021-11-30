@@ -15,6 +15,7 @@
     "cypress-cucumber-preprocessor": "^4.3.0"
   },
   "devDependencies": {
+    "cypress-mochawesome-reporter": "^2.3.0",
     "prettier": "^2.5.0"
   },
   "cypress-cucumber-preprocessor": {
