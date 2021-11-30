@@ -1,10 +1,16 @@
-import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
+import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
 
-Given("I have no todos", () => {
-  cy.visit("/");
-  window.localStorage.setItem("react-todos", "[]");
-});
+import {
+	openToDOApp,
+	clearLocalStorage,
+	createNewToDo,
+} from './../../common/toDo'
 
-When("I submit {string} for my new todo title", (title) => {
-  cy.get(".new-todo").type(`${title}{ENTER}`);
-});
+Given('I have no todos', () => {
+	openToDOApp()
+	clearLocalStorage()
+})
+
+When('I submit {string} for my new todo title', title => {
+	createNewToDo(title)
+})

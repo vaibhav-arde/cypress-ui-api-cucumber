@@ -1,11 +1,11 @@
 import { When } from 'cypress-cucumber-preprocessor/steps'
 
+import { toDoItem, editingToDo } from './../../common/toDo'
+
 When('I choose to edit {string}', title => {
-	cy.get('.todo-list li .view label').contains(title).dblclick()
+	toDoItem().contains(title).dblclick()
 })
 
 When('I submit {string} for my edit todo title', title => {
-	cy.get('li.editing input.edit').type(
-		`{selectall}{backspace}${title}{ENTER}`
-	)
+	editingToDo(title)
 })

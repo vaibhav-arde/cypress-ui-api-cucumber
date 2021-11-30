@@ -1,6 +1,7 @@
-import { Then } from "cypress-cucumber-preprocessor/steps";
+import { Then } from 'cypress-cucumber-preprocessor/steps'
 
-Then("I see the home page", () => {
-  cy.get(".header").should("be.visible");
-  cy.get(".info").should("be.visible");
-});
+import { getHeader, getInfo } from './../../common/toDo'
+Then('I see the home page', () => {
+	getHeader().should('be.visible')
+	getInfo().should('be.visible')
+})
